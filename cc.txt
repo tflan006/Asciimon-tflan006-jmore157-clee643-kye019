@@ -1,0 +1,15 @@
+cd CMakeFiles/tests.dir/src
+lcov --zerocounters --directory .
+../../../tests
+gcov Asciimon.cpp.gcno
+gcov AsciimonCodex.cpp.gcno
+gcov BattleMechanics.cpp.gcno
+gcov ComputerPlayer.cpp.gcno
+gcov HitDetails.cpp.gcno
+gcov BattleResults.cpp.gcno
+gcov StatGenerator.cpp.gcno
+gcov Statistics.cpp.gcno
+gcov Move.cpp.gcno
+gcov Trainer.cpp.gcno
+lcov --capture --directory . --output-file gtest_coverage.info
+genhtml gtest_coverage.info --output-directory CODE_COVERAGE
